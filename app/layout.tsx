@@ -6,6 +6,7 @@ import { Header, Footer } from "@/app/ui/components/layout";
 import { GetLayoutQuery } from "@/app/ui/components/generated/gql/types";
 import { fetchLayoutData } from "@/app/lib/content";
 import { Analytics } from "@vercel/analytics/react";
+
 import Calendly from "./ui/book/Calendly";
 
 const geistSans = Geist({
@@ -19,8 +20,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: { template: "%s | uKlick Studios USA", default: "uKlick Studios USA" },
-  description: "Created by uKlick Studios USA",
+  title: {
+    template: "%s | Gracie Wesley Chapel",
+    default: "Gracie Wesley Chapel",
+  },
+  description: "Created by Gracie Wesley Chapel",
 };
 
 export default async function RootLayout({
