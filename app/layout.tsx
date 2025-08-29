@@ -1,0 +1,67 @@
+import "./globals.css";
+
+import { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Header, Footer } from "@/app/ui/components/layout";
+import { GetLayoutQuery } from "@/app/ui/components/generated/gql/types";
+import { fetchLayoutData } from "@/app/lib/content";
+import { Analytics } from "@vercel/analytics/react";
+import Calendly from "./ui/book/Calendly";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: { template: "%s | uKlick Studios USA", default: "uKlick Studios USA" },
+  description: "Created by uKlick Studios USA",
+};
+
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const layout = (await fetchLayoutData("layout-slug")) as GetLayoutQuery;
+  return (
+    <html lang="en">
+      <link rel="icon" href="/icon.jpg" />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Analytics />
+        <Calendly widget />
+        <Header
+          image={{
+            alt: layout.header?.image?.alt || "",
+            url: layout.header?.image?.url,
+          }}
+          links={
+            layout.header?.links.map((link) => ({
+              anchor: link.anchor || "",
+              label: link.label || "",
+              slug: link.slug || "",
+            })) || []
+          }
+        />
+        {children}
+        <Footer
+          links={
+            layout.footer?.links.map((link) => ({
+              anchor: link.anchor || "",
+              label: link.label || "",
+              slug: link.slug || "",
+            })) || []
+          }
+          ownership={layout.footer?.ownership || ""}
+        />
+      </body>
+    </html>
+  );
+}
