@@ -46,9 +46,10 @@ export default function Contact() {
               Get in touch
             </h2>
             <p className="mt-6 text-lg/8 text-gray-600">
-              Have questions or need more information? We're here to help! Reach
-              out to us for inquiries, bookings, or anything else. We'd love to
-              hear from you and make your experience unforgettable.
+              Have questions about our classes, schedule, or programs? We're
+              here to assist! Contact us for inquiries, bookings, or to learn
+              more about joining our Gracie Wesley Chapel community. Let's
+              connect and help you start your Jiu Jitsu journey!
             </p>
             <dl className="mt-10 space-y-4 text-base/7 text-gray-600">
               <div className="flex gap-x-4">
@@ -60,9 +61,9 @@ export default function Contact() {
                   />
                 </dt>
                 <dd>
-                  Preserve Neighborhood
+                  24720 State Road 54
                   <br />
-                  Odessa FL 33556
+                  Lutz, FL 33559
                 </dd>
               </div>
               <div className="flex gap-x-4">
@@ -78,7 +79,7 @@ export default function Contact() {
                     href="tel:+1 (555) 234-5678"
                     className="hover:text-gray-900"
                   >
-                    +1 (813) 817-1997
+                    +1 (813) 528-8223
                   </a>
                 </dd>
               </div>
@@ -95,7 +96,7 @@ export default function Contact() {
                     href="mailto:hello@example.com"
                     className="hover:text-gray-900"
                   >
-                    uklickstudios@gmail.com
+                    info@graciewesleychapel.com
                   </a>
                 </dd>
               </div>
