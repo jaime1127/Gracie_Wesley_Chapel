@@ -7,8 +7,6 @@ import { GetLayoutQuery } from "@/app/ui/components/generated/gql/types";
 import { fetchLayoutData } from "@/app/lib/content";
 import { Analytics } from "@vercel/analytics/react";
 
-import Calendly from "./ui/book/Calendly";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,12 +33,11 @@ export default async function RootLayout({
   const layout = (await fetchLayoutData("layout-slug")) as GetLayoutQuery;
   return (
     <html lang="en">
-      <link rel="icon" href="/icon.jpg" />
+      <link rel="icon" href="/gracie.jpg" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Analytics />
-        <Calendly widget />
         <Header
           image={{
             alt: layout.header?.image?.alt || "",

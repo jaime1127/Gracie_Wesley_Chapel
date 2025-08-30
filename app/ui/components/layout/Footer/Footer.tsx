@@ -4,7 +4,7 @@ const navigation = {
   social: [
     {
       name: "Facebook",
-      href: "https://www.facebook.com/share/1DVm9zTwVU/?mibextid=wwXIfr",
+      href: "https://www.facebook.com/graciewesleychapel/",
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -17,7 +17,7 @@ const navigation = {
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/uklick_studios/?igsh=MXd1Y2k0bDJ4N2Z5eg%3D%3D&utm_source=qr#",
+      href: "https://www.instagram.com/gracie.wesleychapel/?hl=en",
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -30,7 +30,7 @@ const navigation = {
     },
     {
       name: "GitHub",
-      href: "https://github.com/jaime1127/uklick_studios_usa",
+      href: "https://github.com/jaime1127/Gracie_Wesley_Chapel",
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
