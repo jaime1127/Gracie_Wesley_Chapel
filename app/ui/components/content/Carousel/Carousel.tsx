@@ -110,17 +110,19 @@ export default function Carousel({
             className="justify-items-center"
             key={slide?.image?.url || idx}
           >
-            <Image
-              src={slide?.image?.url || ""}
-              alt={slide?.image?.alt || "Hero Image"}
-              width={550}
-              height={400}
-              loading="lazy"
-              className="rounded-lg"
-              onClick={() =>
-                handleDialog(slide?.image?.url || "", slide?.image?.alt || "")
-              }
-            />
+            {slides && slide?.image?.url && (
+              <Image
+                src={slide?.image?.url || ""}
+                alt={slide?.image?.alt || "Hero Image"}
+                width={550}
+                height={400}
+                loading="lazy"
+                className="rounded-lg"
+                onClick={() =>
+                  handleDialog(slide?.image?.url || "", slide?.image?.alt || "")
+                }
+              />
+            )}
           </SwiperSlide>
         ))}
 

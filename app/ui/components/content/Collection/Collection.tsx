@@ -45,13 +45,15 @@ export default function Collection({
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
             {sets?.map((set, index) => (
               <div key={set?.title || index} className="group relative">
-                <Image
-                  src={set?.image?.url || ""}
-                  alt={set?.image?.alt || "Collection Image"}
-                  width={500}
-                  height={500}
-                  className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
-                />
+                {set?.image && (
+                  <Image
+                    src={set?.image?.url || ""}
+                    alt={set?.image?.alt || "Collection Image"}
+                    width={500}
+                    height={500}
+                    className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                  />
+                )}
                 <h3 className="mt-6 text-sm text-gray-500">
                   <p className="text-base font-semibold text-gray-900">
                     {set.title}
