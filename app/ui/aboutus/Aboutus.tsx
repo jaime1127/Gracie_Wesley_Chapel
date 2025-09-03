@@ -19,7 +19,7 @@ export default function AboutUs({ content = [] }: AboutUsProps) {
         video={false}
       />
 
-      <div className="mx-auto max-w-7xl p-9 bg-white">
+      <div className="mx-auto max-w-7xl py-9 bg-white">
         <h3 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
           Gym Location
         </h3>
@@ -30,7 +30,7 @@ export default function AboutUs({ content = [] }: AboutUsProps) {
           style={{
             border: 0,
             display: "block",
-            margin: "2rem",
+            marginTop: "2rem",
           }}
           loading="lazy"
         ></iframe>
