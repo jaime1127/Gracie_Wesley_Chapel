@@ -55,7 +55,6 @@ export default function Hero({
     },
   },
 }: HeroProps) {
-  console.log("videoAsset", asset);
   return (
     <div className="w-full h-lvh pb-6">
       {video ? (
@@ -73,7 +72,7 @@ export default function Hero({
         />
       ) : (
         <Image
-          src={asset?.url || "/camera.jpg"}
+          src={asset?.url || "/IMG_6389.jpeg"}
           alt={asset?.alt || "Hero Image"}
           width={1200}
           height={1200}

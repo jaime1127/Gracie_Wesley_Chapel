@@ -2,10 +2,8 @@
 
 import { Hero } from "../components/content";
 
-import Pricing from "./Pricing";
 import Faq from "./Faq";
 import RichText from "../components/content/RichText";
-import Team from "./Team";
 
 interface AboutUsProps {
   content?: any;
