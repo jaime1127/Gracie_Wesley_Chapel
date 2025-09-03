@@ -1,59 +1,65 @@
-const files = [
+import { ShieldCheckIcon, HandRaisedIcon, UsersIcon } from '@heroicons/react/20/solid';
+
+const features = [
   {
-    title: "IMG_4985.HEIC",
-    size: "3.9 MB",
-    source:
-      "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    name: 'Striking: Muay Thai',
+    description:
+      'Master the art of striking with our Muay Thai classes. Learn powerful techniques like punches, kicks, elbows, and knees while improving your fitness and coordination.',
+    icon: HandRaisedIcon,
   },
   {
-    title: "IMG_4985.HEIe",
-    size: "3.9 MB",
-    source:
-      "https://images.unsplash.com/photo-1614926857083-7be149266cda?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=512&q=80",
+    name: 'Grappling: Wrestling & BJJ',
+    description:
+      'Develop your grappling skills with our wrestling and Brazilian Jiu Jitsu classes. Learn takedowns, submissions, and ground control in a safe and supportive environment.',
+    icon: ShieldCheckIcon,
   },
   {
-    title: "IMG_4985.HEIv",
-    size: "3.9 MB",
-    source:
-      "https://images.unsplash.com/photo-1614705827065-62c3dc488f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
-  },
-  {
-    title: "IMG_4985.HEIbn",
-    size: "3.9 MB",
-    source:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
+    name: 'Mixed Martial Arts (MMA)',
+    description:
+      'Combine striking and grappling techniques in our MMA classes. Perfect for those looking to train like a fighter or take their skills to the next level.',
+    icon: UsersIcon,
   },
 ];
 
-export default function Example() {
+export default function Feature() {
   return (
-    <ul
-      role="list"
-      className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8 pt-4 pb-4"
-    >
-      {files.map((file) => (
-        <li key={file.source} className="relative">
-          <div className="group overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-            <img
-              alt=""
-              src={file.source}
-              className="pointer-events-none aspect-10/7 object-cover group-hover:opacity-75"
-            />
-            <button
-              type="button"
-              className="absolute inset-0 focus:outline-hidden"
-            >
-              <span className="sr-only">View details for {file.title}</span>
-            </button>
+    <div className="overflow-hidden bg-gray-100 py-24 sm:py-32 dark:bg-gray-900">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="lg:pt-4 lg:pr-8">
+            <div className="lg:max-w-lg">
+              <h2 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">Train with the Best</h2>
+              <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
+                Striking, Grappling, and MMA
+              </p>
+              <p className="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">
+                Whether you're looking to improve your striking, master grappling techniques, or train in MMA, we have classes tailored to your goals. Join us and take your skills to the next level.
+              </p>
+              <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none dark:text-gray-400">
+                {features.map((feature) => (
+                  <div key={feature.name} className="relative pl-9">
+                    <dt className="inline font-semibold text-gray-900 dark:text-white">
+                      <feature.icon
+                        aria-hidden="true"
+                        className="absolute top-1 left-1 size-5 text-indigo-600 dark:text-indigo-400"
+                      />
+                      {feature.name}
+                    </dt>{' '}
+                    <dd className="inline">{feature.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
-          <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
-            {file.title}
-          </p>
-          <p className="pointer-events-none block text-sm font-medium text-gray-500">
-            {file.size}
-          </p>
-        </li>
-      ))}
-    </ul>
+          <img
+            alt="Training sessions"
+            src="/IMG_8442.jpeg"
+            width={2432}
+            height={1442}
+            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 not-dark:hidden sm:w-228 md:-ml-4 lg:-ml-0 dark:ring-white/10"
+          />
+        </div>
+      </div>
+    </div>
   );
 }

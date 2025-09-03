@@ -1,7 +1,13 @@
 import type { GetContentPageQuery } from "@/app/ui/components/generated/gql/types";
 
 import { fetchContentPage } from "@/app/lib/content";
-import { Hero, Carousel, Promo, Collection } from "@/app/ui/components/content";
+import {
+  Hero,
+  Carousel,
+  Promo,
+  Collection,
+  Feature,
+} from "@/app/ui/components/content";
 
 import Bento from "./ui/components/content/Bento/Bento";
 
@@ -14,6 +20,7 @@ export default async function Home() {
         <Hero {...content.contentPage?.hero} video={true} />
       )}
       <Bento />
+      <Feature />
 
       {content.contentPage?.carousel?.[0] && (
         <Carousel {...content.contentPage?.carousel?.[0]} />
