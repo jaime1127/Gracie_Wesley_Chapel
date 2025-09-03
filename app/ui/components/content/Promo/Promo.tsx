@@ -46,10 +46,10 @@ export default function Promo({
           <p className="mt-6 text-base/7 text-gray-300">{description}</p>
           <div className="mt-8">
             <Link
-              href="/book"
+              href="/contact"
               className="inline-flex rounded-md px-3.5 py-2.5 text-sm font-semibold bg-indigo-600 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Book Your Photography Session
+              Contact
             </Link>
           </div>
         </div>
