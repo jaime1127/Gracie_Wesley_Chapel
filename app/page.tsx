@@ -10,6 +10,7 @@ import {
 } from "@/app/ui/components/content";
 
 import Bento from "./ui/components/content/Bento/Bento";
+import Testimonials from "./ui/components/content/Testimonials/Testimonials";
 
 export default async function Home() {
   const content = (await fetchContentPage("home-page")) as GetContentPageQuery;
@@ -21,7 +22,7 @@ export default async function Home() {
       )}
       <Bento />
       <Feature />
-
+      <Testimonials />
       {content.contentPage?.carousel?.[0] && (
         <Carousel {...content.contentPage?.carousel?.[0]} />
       )}
