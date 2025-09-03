@@ -74,8 +74,8 @@ export default function Carousel({
   return (
     <div className="py-6 bg-white">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-800">{heading}</h2>
-        <p className="text-lg text-gray-600 mt-2">{description}</p>
+        <h2 className="text-4xl font-bold text-gray-800 pr-6 pl-6">{heading}</h2>
+        <p className="text-lg text-gray-600 mt-2 pr-6 pl-6">{description}</p>
         <Link
           href={link?.anchor || "#"}
           className="whitespace-nowrap font-semibold text-indigo-600 flex gap-1.5 justify-center underline hover:no-underline"

@@ -66,7 +66,7 @@ export default function Feature() {
             src="/IMG_8447.jpeg"
             width={2432}
             height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10  sm:w-228 md:-ml-4 lg:-ml-0 dark:ring-white/10"
+            className="w-3xl rounded-xl shadow-xl ring-1 ring-gray-400/10  sm:w-228 md:-ml-4 lg:-ml-0 dark:ring-white/10"
           />
         </div>
       </div>
