@@ -1,22 +1,26 @@
-import { ShieldCheckIcon, HandRaisedIcon, UsersIcon } from '@heroicons/react/20/solid';
+import {
+  ShieldCheckIcon,
+  HandRaisedIcon,
+  UsersIcon,
+} from "@heroicons/react/20/solid";
 
 const features = [
   {
-    name: 'Striking: Muay Thai',
+    name: "Striking: Muay Thai",
     description:
-      'Master the art of striking with our Muay Thai classes. Learn powerful techniques like punches, kicks, elbows, and knees while improving your fitness and coordination.',
+      "Master the art of striking with our Muay Thai classes. Learn powerful techniques like punches, kicks, elbows, and knees while improving your fitness and coordination.",
     icon: HandRaisedIcon,
   },
   {
-    name: 'Grappling: Wrestling & BJJ',
+    name: "Grappling: Wrestling & BJJ",
     description:
-      'Develop your grappling skills with our wrestling and Brazilian Jiu Jitsu classes. Learn takedowns, submissions, and ground control in a safe and supportive environment.',
+      "Develop your grappling skills with our wrestling and Brazilian Jiu Jitsu classes. Learn takedowns, submissions, and ground control in a safe and supportive environment.",
     icon: ShieldCheckIcon,
   },
   {
-    name: 'Mixed Martial Arts (MMA)',
+    name: "Mixed Martial Arts (MMA)",
     description:
-      'Combine striking and grappling techniques in our MMA classes. Perfect for those looking to train like a fighter or take their skills to the next level.',
+      "Combine striking and grappling techniques in our MMA classes. Perfect for those looking to train like a fighter or take their skills to the next level.",
     icon: UsersIcon,
   },
 ];
@@ -28,12 +32,16 @@ export default function Feature() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">Train with the Best</h2>
+              <h2 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
+                Train with the Best
+              </h2>
               <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
                 Striking, Grappling, and MMA
               </p>
               <p className="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">
-                Whether you're looking to improve your striking, master grappling techniques, or train in MMA, we have classes tailored to your goals. Join us and take your skills to the next level.
+                Whether you're looking to improve your striking, master
+                grappling techniques, or train in MMA, we have classes tailored
+                to your goals. Join us and take your skills to the next level.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none dark:text-gray-400">
                 {features.map((feature) => (
@@ -44,7 +52,7 @@ export default function Feature() {
                         className="absolute top-1 left-1 size-5 text-indigo-600 dark:text-indigo-400"
                       />
                       {feature.name}
-                    </dt>{' '}
+                    </dt>{" "}
                     <dd className="inline">{feature.description}</dd>
                   </div>
                 ))}
@@ -53,10 +61,10 @@ export default function Feature() {
           </div>
           <img
             alt="Training sessions"
-            src="/IMG_8442.jpeg"
+            src="/IMG_8447.jpeg"
             width={2432}
             height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 not-dark:hidden sm:w-228 md:-ml-4 lg:-ml-0 dark:ring-white/10"
+            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10  sm:w-228 md:-ml-4 lg:-ml-0 dark:ring-white/10"
           />
         </div>
       </div>

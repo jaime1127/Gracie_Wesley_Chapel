@@ -21,7 +21,7 @@ export default function Bento() {
                 <h3 className="text-sm/4 font-semibold text-indigo-600">
                   Training
                 </h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
+                <p className="mt-2 text-lg/8 text-gray-900">
                   Build Skill and Confidence
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -44,7 +44,7 @@ export default function Bento() {
                 <h3 className="text-sm/4 font-semibold text-indigo-600">
                   Community
                 </h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
+                <p className="mt-2 text-lg/8 text-gray-900">
                   Join a Supportive Team
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -67,7 +67,7 @@ export default function Bento() {
                 <h3 className="text-sm/4 font-semibold text-indigo-600">
                   Self-Defense
                 </h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
+                <p className="mt-2 text-lg/8 text-gray-900">
                   Learn Practical Techniques
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -90,7 +90,7 @@ export default function Bento() {
                 <h3 className="text-sm/4 font-semibold text-indigo-600">
                   Fitness
                 </h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
+                <p className="mt-2 text-lg/8 text-gray-900">
                   Improve Your Health
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -113,7 +113,7 @@ export default function Bento() {
                 <h3 className="text-sm/4 font-semibold text-indigo-600">
                   Competition
                 </h3>
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
+                <p className="mt-2 text-lg/8 text-gray-900">
                   Test Your Skills
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
