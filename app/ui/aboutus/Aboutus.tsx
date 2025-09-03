@@ -18,6 +18,23 @@ export default function AboutUs({ content = [] }: AboutUsProps) {
         description="At Gracie Wesley Chapel, we are dedicated to helping you achieve your goals through the art of Brazilian Jiu Jitsu. Whether you're here for self-defense, fitness, or competition, our supportive community and expert instructors are here to guide you every step of the way."
         video={false}
       />
+
+      <div className="mx-auto max-w-7xl p-9 bg-white">
+        <h3 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+          Gym Location
+        </h3>
+        <iframe
+          src="https://storage.googleapis.com/maps-solutions-g05phn0ug6/locator-plus/kqh6/locator-plus.html"
+          width="100%"
+          height="450"
+          style={{
+            border: 0,
+            display: "block",
+            margin: "2rem",
+          }}
+          loading="lazy"
+        ></iframe>
+      </div>
       {/* Our misson*/}
       <div className="mx-auto max-w-7xl p-9 bg-white">
         <RichText content={content[0].raw} />
