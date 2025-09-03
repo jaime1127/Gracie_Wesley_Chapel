@@ -4,6 +4,8 @@ import {
   UsersIcon,
 } from "@heroicons/react/20/solid";
 
+import Image from "next/image";
+
 const features = [
   {
     name: "Striking: Muay Thai",
@@ -59,7 +61,7 @@ export default function Feature() {
               </dl>
             </div>
           </div>
-          <img
+          <Image
             alt="Training sessions"
             src="/IMG_8447.jpeg"
             width={2432}
