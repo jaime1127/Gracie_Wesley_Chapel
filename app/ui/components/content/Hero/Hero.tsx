@@ -55,6 +55,7 @@ export default function Hero({
     },
   },
 }: HeroProps) {
+  console.log("videoAsset", asset);
   return (
     <div className="w-full h-lvh pb-6">
       {video ? (

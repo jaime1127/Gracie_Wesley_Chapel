@@ -72,7 +72,7 @@ export default function Carousel({
   }
 
   return (
-    <div className="pt-6 bg-white">
+    <div className="py-6 bg-white">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-gray-800">{heading}</h2>
         <p className="text-lg text-gray-600 mt-2">{description}</p>

@@ -51,13 +51,15 @@ export default function ImageList({
                 type="button"
                 aria-label={set.asset?.alt || "Open image"}
               >
-                <Image
-                  alt={set?.asset?.alt || ""}
-                  src={set?.asset?.url || ""}
-                  width={550}
-                  height={400}
-                  loading="lazy"
-                />
+                {set?.asset?.url && (
+                  <Image
+                    alt={set?.asset?.alt || ""}
+                    src={set?.asset?.url || ""}
+                    width={550}
+                    height={400}
+                    loading="lazy"
+                  />
+                )}
               </button>
             </li>
           ))}

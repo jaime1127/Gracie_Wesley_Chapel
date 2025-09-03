@@ -7,34 +7,39 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
-    question: "What is a self-photo studio?",
+    question: "What is Brazilian Jiu Jitsu (BJJ)?",
     answer:
-      "Just like other studios, a self-photo studio is professionally equipped and setup. However, there won't be a photographer in the studio with you. You are your own model and photographer. You will be provided with a remote control to capture as many photographs as you want. If you feel awkward or camera shy when a stranger takes your photo, our studio is here for you!",
+      "Brazilian Jiu Jitsu is a martial art and self-defense system that focuses on grappling and ground fighting. It emphasizes technique and leverage, making it effective for people of all sizes and skill levels.",
   },
   {
-    question: "Why are the packages so afforable?",
+    question: "Do I need prior experience to join?",
     answer:
-      "We want you to capture special moments without breaking the bank. Besides, you took your own pictures, why charge you for your own effort?",
+      "Not at all! Our classes are designed for all skill levels, from complete beginners to advanced practitioners. Our instructors will guide you every step of the way.",
   },
   {
-    question: "Will my timer be paused when backdrop is being changed?",
+    question: "What should I wear to my first class?",
     answer:
-      "Yes! Just let us know once ready for the backdrop change and we'll assist.",
+      "For your first class, wear comfortable athletic clothing like a t-shirt and shorts. If you have a gi (uniform), feel free to bring it. We also have gis available for purchase or rental.",
   },
   {
-    question: "Can I add more than one backdrops?",
+    question: "Is Brazilian Jiu Jitsu safe?",
     answer:
-      "Of course! If multiple backdrops are not included in the package booked, please request to add one has to be done upon booking as this will consume time and might affect next booking.",
+      "Yes, safety is our top priority. Our instructors ensure that all techniques are taught in a controlled and safe environment. We encourage students to communicate with their training partners to prevent injuries.",
   },
   {
-    question: "Can I bring my own props?",
+    question: "Can I bring my child to train?",
     answer:
-      "Absolutely! As long as your props will fit our door. If props need setting up, you can use your given 10 mins prep time before your session. Studio timer will start after the 10 mins prep time.",
+      "Absolutely! We offer kids' classes designed to teach discipline, confidence, and self-defense in a fun and supportive environment.",
   },
   {
-    question: "Can I change outfits?",
+    question: "Do you offer classes for women?",
     answer:
-      "Of course! You can use our restroom next to our studio room. But please know that timer will not be paused during the change outfit.",
+      "Yes, we offer classes for everyone, including women-only classes that focus on self-defense, fitness, and building confidence in a supportive environment.",
+  },
+  {
+    question: "How often should I train?",
+    answer:
+      "The frequency of training depends on your goals and schedule. Many students train 2-3 times per week, but you can adjust based on your availability and fitness level.",
   },
 ];
 
