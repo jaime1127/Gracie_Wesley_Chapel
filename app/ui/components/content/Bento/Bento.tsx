@@ -21,7 +21,7 @@ export default function Bento() {
                 <h3 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
                   Training
                 </h3>
-                <p className="mt-2 text-lg/8 text-gray-900">
+                <p className="mt-2 text-lg/8 text-gray-900 font-semibold">
                   Build Skill and Confidence
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -44,7 +44,7 @@ export default function Bento() {
                 <h3 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
                   Community
                 </h3>
-                <p className="mt-2 text-lg/8 text-gray-900">
+                <p className="mt-2 text-lg/8 text-gray-900 font-semibold">
                   Join a Supportive Team
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -67,7 +67,7 @@ export default function Bento() {
                 <h3 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
                   Self-Defense
                 </h3>
-                <p className="mt-2 text-lg/8 text-gray-900">
+                <p className="mt-2 text-lg/8 text-gray-900 font-semibold">
                   Learn Practical Techniques
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -90,7 +90,7 @@ export default function Bento() {
                 <h3 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
                   Fitness
                 </h3>
-                <p className="mt-2 text-lg/8 text-gray-900">
+                <p className="mt-2 text-lg/8 text-gray-900 font-semibold">
                   Improve Your Health
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
@@ -113,7 +113,7 @@ export default function Bento() {
                 <h3 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
                   Competition
                 </h3>
-                <p className="mt-2 text-lg/8 text-gray-900">
+                <p className="mt-2 text-lg/8 text-gray-900 font-semibold">
                   Test Your Skills
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
