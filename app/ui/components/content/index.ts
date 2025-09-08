@@ -4,7 +4,6 @@ export { default as Dialog } from "./Dialog/Dialog";
 export { default as Feature } from "./Feature/Feature";
 export { default as Hero } from "./Hero/Hero";
 export { default as ImageList } from "./ImageList/ImageList";
-export { default as Pricing } from "../../aboutus/Pricing";
 export { default as Promo } from "./Promo/Promo";
 export { default as RichText } from "./RichText/RichText";
 export { default as Testimonials } from "./Testimonials/Testimonials";

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { fetchPortfolioData } from "../lib/content";
+import { fetchPortfolioData } from "@/app/lib/content";
 import { GetPortfolioQuery } from "@/app/ui/components/generated/gql/types";
 import { InstructorLayout } from "@/app/ui/instructors";
 

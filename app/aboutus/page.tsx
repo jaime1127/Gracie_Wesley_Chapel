@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import { fetchContentPage } from "../lib/content";
+import { fetchContentPage } from "@/app/lib/content";
 import { GetContentPageQuery } from "@/app/ui/components/generated/gql/types";
 
-import Aboutus from "@/app/ui/aboutus/Aboutus";
+import { Aboutus } from "@/app/ui/aboutus/";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 export default async function Page() {
   const content = (await fetchContentPage("about-us")) as GetContentPageQuery;
 
-  const contentArray =
+  const richText =
     content.contentPage && Array.isArray(content.contentPage.content)
       ? content.contentPage.content
       : [];
 
   return (
     <main>
-      <Aboutus content={contentArray} />
+      <Aboutus content={richText} hero={{ ...content.contentPage?.hero }} />
     </main>
   );
 }

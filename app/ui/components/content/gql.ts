@@ -35,6 +35,10 @@ export const heroFields = gql`
       anchor
       label
     }
+    backgroundImage {
+      url
+      alt
+    }
     asset {
       url
       alt

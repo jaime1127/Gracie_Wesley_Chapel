@@ -1,21 +1,26 @@
 "use client";
 
 import { RichText, Hero } from "@/app/ui/components/content";
+import { HeroProps } from "../components/content/Hero/Hero";
 
-import Faq from "./Faq";
+import { Faq } from "@/app/ui/aboutus";
 
 interface AboutUsProps {
   content?: any;
+  hero?: HeroProps;
 }
 
-export default function AboutUs({ content = [] }: AboutUsProps) {
+export default function AboutUs({ content = [], hero }: AboutUsProps) {
   return (
     <main className="relative">
       <Hero
-        blog="More Than a Gym"
-        heading="Welcome to Gracie Wesley Chapel"
-        description="At Gracie Wesley Chapel, we are dedicated to helping you achieve your goals through the art of Brazilian Jiu Jitsu. Whether you're here for self-defense, fitness, or competition, our supportive community and expert instructors are here to guide you every step of the way."
-        video={false}
+        blog={hero?.blog}
+        heading={hero?.heading}
+        description={hero?.description}
+        link={hero?.link}
+        asset={hero?.asset}
+        video={true}
+        videoAsset={hero?.videoAsset}
       />
 
       <div className="mx-auto max-w-7xl py-9 bg-white">
@@ -25,7 +30,7 @@ export default function AboutUs({ content = [] }: AboutUsProps) {
         <iframe
           src="https://storage.googleapis.com/maps-solutions-g05phn0ug6/locator-plus/kqh6/locator-plus.html"
           width="100%"
-          height="450"
+          height="700"
           style={{
             border: 0,
             display: "block",

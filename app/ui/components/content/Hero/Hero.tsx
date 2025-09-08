@@ -5,7 +5,14 @@ import { Video } from "@/app/ui/components/content";
 import Image from "next/image";
 import Link from "next/link";
 
-interface HeroProps {
+export interface HeroProps {
+  backgroundImage?:
+    | {
+        url?: string | undefined | null;
+        alt?: string | undefined | null;
+      }
+    | undefined
+    | null;
   blog?: string | undefined | null;
   heading?: string | undefined | null;
   description?: string | undefined | null;
@@ -41,6 +48,7 @@ interface HeroProps {
 }
 
 export default function Hero({
+  backgroundImage = { url: "", alt: "" },
   blog = "",
   heading = undefined,
   description = undefined,
@@ -73,12 +81,12 @@ export default function Hero({
         />
       ) : (
         <Image
-          src={asset?.url || "/IMG_6389.jpeg"}
-          alt={asset?.alt || "Hero Image"}
+          src={backgroundImage?.url || "/IMG_6389.jpeg"}
+          alt={backgroundImage?.alt || "Hero Image"}
           width={1200}
           height={1200}
           loading="lazy"
-          className="absolute inset-0 w-full h-lvh object-cover -z-10"
+          className="absolute inset-0 w-full h-lvh -z-10"
         />
       )}
       <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-8 z-10 text-center h-lvh p-4 m-8">
