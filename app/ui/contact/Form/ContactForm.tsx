@@ -48,7 +48,7 @@ export default function ContactForm() {
     try {
       await emailjs.sendForm(
         "uklick-studios",
-        "template_7vn6gee",
+        "template_ocvpq1m",
         event.currentTarget,
         process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY || ""
       );

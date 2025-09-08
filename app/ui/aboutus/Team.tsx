@@ -1,6 +1,7 @@
 "use client";
 
-import RichText from "../components/content/RichText";
+import { RichText } from "@/app/ui/components/content";
+
 import Image from "next/image";
 
 const team = [

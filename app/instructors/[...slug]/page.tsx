@@ -1,47 +1,30 @@
-import { fetchImageListData } from "@/app/lib/content";
-import ImageList from "@/app/ui/components/content/ImageList/ImageList";
-import { GetImageListQuery } from "@/app/ui/components/generated/gql/types";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
+
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Portfolio Details",
+  title: "Instructor Details",
 };
 
-export default async function PortfolioPage(props: {
+export default async function InstructorPage(props: {
   params: Promise<{ slug: string }>;
 }) {
   const slug = await props.params;
-  const portfolioSets = (await fetchImageListData(
-    slug.slug[0] || "default-slug"
-  )) as GetImageListQuery;
 
   return (
-    <main className="py-8 mx-auto max-w-7xl bg-white">
-      <h1 className="text-2xl font-bold">Portfolio Page</h1>
-      <p className="mt-4 text-lg text-gray-600">
-        You are viewing the portfolio for:{" "}
-        <strong>{portfolioSets.imageList?.title}</strong>
-      </p>
+    <main className="py-8 mx-auto max-w-7xl bg-white my-16">
+      <h1 className="text-2xl font-bold">Instructor Page</h1>
       <Link
-        href="/portfolio"
+        href="/instructors"
         className="whitespace-nowrap font-semibold text-indigo-600 inline-flex gap-1.5 underline hover:no-underline"
       >
-        Return to Portfolio Page
+        Return to All Instructors Page
         <ArrowLongRightIcon className="h-6 w-6 text-indigo-600" />
       </Link>
-      <ImageList
-        sets={
-          portfolioSets.imageList?.set.map((set, index) => ({
-            slug: set.slug || `fallback-key-${index}`, // Use a fallback key if slug is empty
-            asset: {
-              url: set.image?.url || "",
-              alt: set.image?.alt || "",
-            },
-          })) || []
-        }
-      />
+      <p className="mt-4 text-lg text-gray-600">
+        You are viewing the instructor page for: <strong>{slug.slug[0]}</strong>
+      </p>
     </main>
   );
 }

@@ -1,9 +1,8 @@
 "use client";
 
-import { Hero } from "../components/content";
+import { RichText, Hero } from "@/app/ui/components/content";
 
 import Faq from "./Faq";
-import RichText from "../components/content/RichText";
 
 interface AboutUsProps {
   content?: any;

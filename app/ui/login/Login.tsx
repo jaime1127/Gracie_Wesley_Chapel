@@ -57,10 +57,6 @@ export default function Login() {
           </div>
         </form>
         <p className="mt-10 text-center text-sm/6 text-gray-500">
-          Login with your email and password provided by admin to see your
-          photos.
-        </p>
-        <p className="mt-10 text-center text-sm/6 text-gray-500">
           *Credentials will be provided after the session is complete*
         </p>
       </div>

@@ -58,7 +58,7 @@ export default function Collection({
                   <p className="text-base font-semibold text-gray-900">
                     {set.title}
                   </p>
-                  <Link href={"portfolio/" + set.slug || ""}>
+                  <Link href={"instructors/" + set.slug || ""}>
                     <span className="absolute inset-0" />
                     {set.description}
                   </Link>

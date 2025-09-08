@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
+import { Dialog } from "@/app/ui/components/content";
 
 import Image from "next/image";
-import Dialog from "../Dialog/Dialog";
 
 export interface CollectionProps {
   sets?: {

@@ -9,6 +9,7 @@ import {
   GetImageListQuery,
   GetContentPageQuery,
 } from "@/app/ui/components/generated/gql/types";
+
 import {
   carouselQuery,
   collectionQuery,
@@ -18,6 +19,7 @@ import {
   portfolioQuery,
   promoQuery,
 } from "@/app/ui/components/content/gql";
+
 import { layoutQuery } from "../ui/components/layout/gql";
 
 const HYGRAPH_API_ENDPOINT =

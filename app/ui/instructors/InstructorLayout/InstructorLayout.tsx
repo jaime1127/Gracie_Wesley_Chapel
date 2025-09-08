@@ -1,18 +1,18 @@
 "use client";
 
-import Collection, { CollectionProps } from "../Collection/Collection";
+import Instructors, { CollectionProps } from "../Instructors";
 
-interface PortfolioProps {
+interface InstructorLayoutProps {
   collection?: CollectionProps[] | undefined | null;
   heading?: string | undefined | null;
   description?: string | undefined | null;
 }
 
-export default function Portfolio({
+export default function InstructorLayout({
   collection = [],
   heading = "",
   description = "",
-}: PortfolioProps) {
+}: InstructorLayoutProps) {
   return (
     <div className="py-4">
       <div className="justify-items-center">
@@ -23,7 +23,7 @@ export default function Portfolio({
       </div>
       <div className="space-y-12">
         {collection?.map((collection, index) => (
-          <Collection
+          <Instructors
             key={index}
             heading={collection.heading}
             sets={collection.sets}

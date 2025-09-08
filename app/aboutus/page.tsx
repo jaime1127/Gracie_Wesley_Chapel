@@ -1,7 +1,8 @@
 import { Metadata } from "next";
-import Aboutus from "@/app/ui/aboutus/Aboutus";
 import { fetchContentPage } from "../lib/content";
-import { GetContentPageQuery } from "../ui/components/generated/gql/types";
+import { GetContentPageQuery } from "@/app/ui/components/generated/gql/types";
+
+import Aboutus from "@/app/ui/aboutus/Aboutus";
 
 export const metadata: Metadata = {
   title: "About Us",

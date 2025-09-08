@@ -1,15 +1,16 @@
 import { fetchImageListData } from "@/app/lib/content";
-import ImageList from "@/app/ui/components/content/ImageList/ImageList";
 import { GetImageListQuery } from "@/app/ui/components/generated/gql/types";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
+import { ImageList } from "@/app/ui/components/content";
+
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Portfolio Details",
+  title: "Gallery Details",
 };
 
-export default async function PortfolioPage(props: {
+export default async function GalleryPage(props: {
   params: Promise<{ slug: string }>;
 }) {
   const slug = await props.params;

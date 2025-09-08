@@ -1,4 +1,4 @@
-export default function Example() {
+export default function Testimonials() {
   return (
     <div className="bg-white py-10 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl ">

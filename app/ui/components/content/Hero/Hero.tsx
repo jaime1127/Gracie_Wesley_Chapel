@@ -1,8 +1,9 @@
 "use client";
 
+import { Video } from "@/app/ui/components/content";
+
 import Image from "next/image";
 import Link from "next/link";
-import Video from "../Video/Video";
 
 interface HeroProps {
   blog?: string | undefined | null;

@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 import { fetchPortfolioData } from "../lib/content";
-import { GetPortfolioQuery } from "../ui/components/generated/gql/types";
+import { GetPortfolioQuery } from "@/app/ui/components/generated/gql/types";
+import { InstructorLayout } from "@/app/ui/instructors";
 
-import Portfolio from "../ui/components/content/Portfolio/Portfolio";
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Instructors",
 };
 
 export default async function Page() {
-  const portfolioSets = (await fetchPortfolioData(
+  const jiuJitsuInstructors = (await fetchPortfolioData(
     "portfolio-slug"
   )) as GetPortfolioQuery;
   return (
     <main className="relative mx-auto max-w-7xl mb-4 pt-16 bg-white">
-      <Portfolio {...portfolioSets.portfolio} />
+      <InstructorLayout {...jiuJitsuInstructors.portfolio} />
     </main>
   );
 }

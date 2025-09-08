@@ -9,6 +9,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 import { useRef, useState } from "react";
+import { Dialog } from "@/app/ui/components/content";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +18,7 @@ import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import Dialog from "../Dialog/Dialog";
+
 
 interface SwiperProps {
   heading?: string | undefined | null;
@@ -74,7 +75,9 @@ export default function Carousel({
   return (
     <div className="py-6 bg-white">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-800 pr-6 pl-6">{heading}</h2>
+        <h2 className="text-4xl font-bold text-gray-800 pr-6 pl-6">
+          {heading}
+        </h2>
         <p className="text-lg text-gray-600 mt-2 pr-6 pl-6">{description}</p>
         <Link
           href={link?.anchor || "#"}
