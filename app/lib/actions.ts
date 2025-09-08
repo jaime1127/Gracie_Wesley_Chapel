@@ -58,8 +58,8 @@ export async function sendContactEmail(prevState: State, formData: FormData) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          service_id: "uklick-studios",
-          template_id: "template_7vn6gee",
+          service_id: "gracie-wesley-chapel",
+          template_id: "template_ocvpq1m",
           user_id: process.env.EMAIL_JS_PUBLIC_KEY, // Ensure this is set in your .env file
           template_params: {
             firstName,

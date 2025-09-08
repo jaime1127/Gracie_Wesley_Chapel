@@ -202,11 +202,64 @@ export const imageListQuery = gql`
   }
 `;
 
+export const bentoQuery = gql`
+  query getBento($slug: String!) {
+    bento(where: { slug: $slug }) {
+      heading
+      description
+      largeBox {
+        heading
+        eyebrow
+        description
+        asset {
+          alt
+          url
+        }
+      }
+      smallBox {
+        eyebrow
+        heading
+        description
+        asset {
+          alt
+          url
+        }
+      }
+    }
+  }
+`;
+
+export const bentoFields = gql`
+  fragment bentoFields on Bento {
+    heading
+    description
+    largeBox {
+      heading
+      eyebrow
+      description
+      asset {
+        alt
+        url
+      }
+    }
+    smallBox {
+      eyebrow
+      heading
+      description
+      asset {
+        alt
+        url
+      }
+    }
+  }
+`;
+
 export const contentPageQuery = gql`
   ${heroFields}
   ${carouselFields}
   ${promoFields}
   ${collectionFields}
+  ${bentoFields}
   query getContentPage($slug: String!) {
     contentPage(where: { slug: $slug }) {
       slug
@@ -224,6 +277,9 @@ export const contentPageQuery = gql`
       }
       collection {
         ...collectionFields
+      }
+      bento {
+        ...bentoFields
       }
     }
   }

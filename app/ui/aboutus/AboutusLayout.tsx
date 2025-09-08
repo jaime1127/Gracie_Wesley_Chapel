@@ -2,8 +2,9 @@
 
 import { RichText, Hero } from "@/app/ui/components/content";
 import { HeroProps } from "../components/content/Hero/Hero";
-
 import { Faq } from "@/app/ui/aboutus";
+
+import Image from "next/image";
 
 interface AboutUsProps {
   content?: any;
@@ -39,8 +40,20 @@ export default function AboutUs({ content = [], hero }: AboutUsProps) {
           loading="lazy"
         ></iframe>
       </div>
+
+      {/* Image section */}
+      <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
+        <Image
+          src="/thegym.jpg"
+          alt="Our Mission"
+          width={1200}
+          height={600}
+          className="w-full h-auto object-cover"
+        />
+      </div>
+
       {/* Our misson*/}
-      <div className="mx-auto max-w-7xl p-9 bg-white">
+      <div className="mx-auto max-w-7xl py-9 bg-white">
         <RichText content={content[0].raw} />
       </div>
       <Faq />

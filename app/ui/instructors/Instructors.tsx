@@ -49,8 +49,8 @@ export default function Collection({
                   <Image
                     src={set?.image?.url || ""}
                     alt={set?.image?.alt || "Collection Image"}
-                    width={500}
-                    height={500}
+                    width={1000}
+                    height={1000}
                     className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
                   />
                 )}
