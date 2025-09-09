@@ -1,9 +1,9 @@
 "use client";
 
-import Instructors, { CollectionProps } from "../Instructors";
+import Instructors, { InsturctorProps } from "../Instructors";
 
 interface InstructorLayoutProps {
-  collection?: CollectionProps[] | undefined | null;
+  collection?: InsturctorProps[] | undefined | null;
   heading?: string | undefined | null;
   description?: string | undefined | null;
 }

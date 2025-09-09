@@ -168,10 +168,10 @@ export const collectionFields = gql`
   }
 `;
 
-export const portfolioQuery = gql`
+export const instructorQuery = gql`
   ${collectionFields}
-  query getPortfolio($slug: String!) {
-    portfolio(where: { slug: $slug }) {
+  query getInstructor($slug: String!) {
+    instructorList(where: { slug: $slug }) {
       heading
       description
       collection {

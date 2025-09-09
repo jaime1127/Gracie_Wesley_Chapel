@@ -5,20 +5,18 @@ import {
   GetHeroQuery,
   GetLayoutQuery,
   GetPromoQuery,
-  GetCollectionQuery,
-  GetPortfolioQuery,
   GetImageListQuery,
   GetContentPageQuery,
+  GetInstructorQuery,
 } from "@/app/ui/components/generated/gql/types";
 
 import {
   bentoQuery,
   carouselQuery,
-  collectionQuery,
   contentPageQuery,
   heroQuery,
   imageListQuery,
-  portfolioQuery,
+  instructorQuery,
   promoQuery,
 } from "@/app/ui/components/content/gql";
 
@@ -83,30 +81,16 @@ export const fetchLayoutData = async (values: string) => {
   }
 };
 
-export const fetchCollectionData = async (values: string) => {
+export const fetchInstructorData = async (values: string) => {
   try {
-    const response = await request(HYGRAPH_API_ENDPOINT, collectionQuery, <
-      GetCollectionQuery
+    const response = await request(HYGRAPH_API_ENDPOINT, instructorQuery, <
+      GetInstructorQuery
     >{
       slug: values,
     });
     return response;
   } catch (error) {
-    console.error("Error fetching collection data:", error);
-    throw error;
-  }
-};
-
-export const fetchPortfolioData = async (values: string) => {
-  try {
-    const response = await request(HYGRAPH_API_ENDPOINT, portfolioQuery, <
-      GetPortfolioQuery
-    >{
-      slug: values,
-    });
-    return response;
-  } catch (error) {
-    console.error("Error fetching portfolio data:", error);
+    console.error("Error fetching instructor data:", error);
     throw error;
   }
 };

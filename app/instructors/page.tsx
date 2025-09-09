@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { fetchPortfolioData } from "@/app/lib/content";
-import { GetPortfolioQuery } from "@/app/ui/components/generated/gql/types";
+import { fetchInstructorData } from "@/app/lib/content";
+import { GetInstructorQuery } from "@/app/ui/components/generated/gql/types";
 import { InstructorLayout } from "@/app/ui/instructors";
 
 export const metadata: Metadata = {
@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const jiuJitsuInstructors = (await fetchPortfolioData(
-    "portfolio-slug"
-  )) as GetPortfolioQuery;
+  const jiuJitsuInstructors = (await fetchInstructorData(
+    "instructor-slug"
+  )) as GetInstructorQuery;
   return (
     <main className="relative mx-auto max-w-7xl mb-4 pt-16 bg-white">
-      <InstructorLayout {...jiuJitsuInstructors.portfolio} />
+      <InstructorLayout {...jiuJitsuInstructors.instructorList} />
     </main>
   );
 }

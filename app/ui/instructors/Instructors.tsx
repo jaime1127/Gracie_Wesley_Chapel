@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export interface CollectionProps {
+export interface InsturctorProps {
   heading?: string | undefined | null;
   sets?:
     | {
@@ -23,7 +23,7 @@ export interface CollectionProps {
 }
 [];
 
-export default function Collection({
+export default function Instructor({
   heading = "",
   sets = [
     {
@@ -36,7 +36,7 @@ export default function Collection({
       slug: "",
     },
   ],
-}: CollectionProps) {
+}: InsturctorProps) {
   return (
     <div className="py-4">
       <div className="mx-auto max-w-7xl p-8 bg-gray-100">
@@ -48,7 +48,7 @@ export default function Collection({
                 {set?.image && (
                   <Image
                     src={set?.image?.url || ""}
-                    alt={set?.image?.alt || "Collection Image"}
+                    alt={set?.image?.alt || "Instructor Image"}
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
