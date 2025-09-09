@@ -121,7 +121,7 @@ export const collectionQuery = gql`
     collection(where: { slug: $slug }) {
       slug
       heading
-      sets {
+      sets(first: 15) {
         slug
         id
         title
@@ -138,6 +138,7 @@ export const collectionQuery = gql`
           handle
           __typename
         }
+        imagePosition
       }
     }
   }
@@ -147,11 +148,12 @@ export const collectionFields = gql`
   fragment collectionFields on Collection {
     slug
     heading
-    sets {
+    sets(first: 15) {
       slug
       id
       title
       description
+      imagePosition
       image {
         id
         alt

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ObjectPostion } from "../components/generated/gql/types";
 
 export interface InsturctorProps {
   heading?: string | undefined | null;
@@ -17,6 +18,7 @@ export interface InsturctorProps {
         title?: string | undefined | null;
         description?: string | undefined | null;
         slug?: string | undefined | null;
+        imagePosition?: ObjectPostion | null | undefined;
       }[]
     | undefined
     | null;
@@ -34,6 +36,7 @@ export default function Instructor({
       title: "",
       description: "",
       slug: "",
+      imagePosition: null,
     },
   ],
 }: InsturctorProps) {
@@ -42,7 +45,7 @@ export default function Instructor({
       <div className="mx-auto max-w-7xl p-8 bg-gray-100">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <h2 className="text-2xl font-bold text-gray-900">{heading || ""}</h2>
-          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
+          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6 lg:gap-y-6">
             {sets?.map((set, index) => (
               <div key={set?.title || index} className="group relative">
                 {set?.image && (
@@ -52,6 +55,9 @@ export default function Instructor({
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
+                    style={{
+                      objectPosition: set?.imagePosition || "center",
+                    }}
                   />
                 )}
                 <h3 className="mt-6 text-sm text-gray-500">
