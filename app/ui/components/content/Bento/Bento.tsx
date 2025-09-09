@@ -61,11 +61,11 @@ export default function Bento({
               <div className="absolute inset-0 rounded-lg bg-white lg:rounded-tr-4xl" />
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(2rem+1px)]">
                 <Image
-                  alt="Community"
-                  src="/IMG_8455.jpeg"
+                  alt={box?.asset?.alt || "Large Box Image"}
+                  src={box?.asset?.url || "/IMG_8455.jpeg"}
                   className="h-80 object-cover object-left lg:object-right"
-                  height={320}
-                  width={480}
+                  height={1000}
+                  width={1000}
                 />
                 <div className="p-10 pt-4">
                   <h3 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">
@@ -88,8 +88,8 @@ export default function Bento({
               <div className="absolute inset-0 rounded-lg bg-white max-lg:rounded-b-4xl lg:rounded-br-4xl" />
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-br-[calc(2rem+1px)]">
                 <Image
-                  alt="Community"
-                  src="/IMG_8455.jpeg"
+                  alt={box?.asset?.alt || "Small Box Image"}
+                  src={box?.asset?.url || "/IMG_8455.jpeg"}
                   className="h-80 object-cover"
                   height={320}
                   width={480}

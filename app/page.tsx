@@ -20,7 +20,10 @@ export default async function Home() {
 
       {content.contentPage?.bento && <Bento {...content.contentPage?.bento} />}
 
-      <Feature />
+      {content.contentPage?.featureLists && (
+        <Feature {...content.contentPage?.featureLists?.[0]} />
+      )}
+
       <Testimonials />
 
       {content.contentPage?.carousel?.[0] && (

@@ -254,12 +254,32 @@ export const bentoFields = gql`
   }
 `;
 
+export const featureFields = gql`
+  fragment featureFields on FeatureList {
+    eyebrow
+    heading
+    description
+    asset {
+      alt
+      url
+    }
+    feature {
+      description
+      icon {
+        alt
+      }
+      title
+    }
+  }
+`;
+
 export const contentPageQuery = gql`
   ${heroFields}
   ${carouselFields}
   ${promoFields}
   ${collectionFields}
   ${bentoFields}
+  ${featureFields}
   query getContentPage($slug: String!) {
     contentPage(where: { slug: $slug }) {
       slug
@@ -280,6 +300,9 @@ export const contentPageQuery = gql`
       }
       bento {
         ...bentoFields
+      }
+      featureLists {
+        ...featureFields
       }
     }
   }
