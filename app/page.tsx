@@ -12,14 +12,14 @@ import {
 
 export default async function Home() {
   const content = (await fetchContentPage("home-page")) as GetContentPageQuery;
-
   return (
     <main className="mx-auto max-w-7xl bg-white">
       {content.contentPage?.hero && (
         <Hero {...content.contentPage?.hero} video={true} />
       )}
 
-      <Bento />
+      {content.contentPage?.bento && <Bento {...content.contentPage?.bento} />}
+
       <Feature />
       <Testimonials />
 
