@@ -1,42 +1,16 @@
-import type { GetContentPageQuery } from "@/app/ui/components/generated/gql/types";
+import type { GetNewContentPageQuery } from "@/app/ui/components/generated/gql/types";
 
-import { fetchContentPage } from "@/app/lib/content";
-import {
-  Bento,
-  Hero,
-  Carousel,
-  Promo,
-  Feature,
-  Testimonials,
-} from "@/app/ui/components/content";
+import { fetchNewContentPage } from "@/app/lib/content";
+import { ContentPage } from "@/app/ui/components/content";
 
 export default async function Home() {
-  const content = (await fetchContentPage("home-page")) as GetContentPageQuery;
+  const content = (await fetchNewContentPage(
+    "home-page"
+  )) as GetNewContentPageQuery;
+
   return (
     <main className="mx-auto max-w-7xl bg-white">
-      {content.contentPage?.hero && (
-        <Hero {...content.contentPage?.hero} video={true} />
-      )}
-
-      {content.contentPage?.bento && <Bento {...content.contentPage?.bento} />}
-
-      {content.contentPage?.featureLists && (
-        <Feature {...content.contentPage?.featureLists?.[0]} />
-      )}
-
-      <Testimonials />
-
-      {content.contentPage?.carousel?.[0] && (
-        <Carousel {...content.contentPage?.carousel?.[0]} />
-      )}
-
-      {content.contentPage?.promo?.[0] && (
-        <Promo {...content.contentPage?.promo?.[0]} />
-      )}
-
-      {content.contentPage?.carousel?.[1] && (
-        <Carousel {...content.contentPage?.carousel?.[1]} />
-      )}
+      <ContentPage {...content.contentPage} />
     </main>
   );
 }

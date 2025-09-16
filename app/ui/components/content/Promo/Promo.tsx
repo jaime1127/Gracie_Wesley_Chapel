@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-interface PromoProps {
+export interface PromoProps {
+  __typename: string | undefined;
   heading?: string | undefined | null;
   description?: string | undefined | null;
   eyebrow?: string | undefined | null;

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export interface BentoProps {
+ __typename: string | undefined;
   heading?: string | undefined | null;
   description?: string | undefined | null;
   largeBox?:

@@ -1,5 +1,7 @@
+export { default as Blocks } from "./Blocks/Blocks";
 export { default as Bento } from "./Bento/Bento";
 export { default as Carousel } from "./Carousel/Carousel";
+export { default as ContentPage } from "./ContentPage/ContentPage";
 export { default as Dialog } from "./Dialog/Dialog";
 export { default as Feature } from "./Feature/Feature";
 export { default as Hero } from "./Hero/Hero";

@@ -20,7 +20,8 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
 
-interface SwiperProps {
+export interface SwiperProps {
+__typename: string | undefined;
   heading?: string | undefined | null;
   description?: string | undefined | null;
   slides?:

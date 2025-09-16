@@ -1,59 +1,33 @@
-// import Carousel from "../Carousel/Carousel";
-// import Hero from "../Hero/Hero";
-// import Promo from "../Promo/Promo";
+import Carousel, { SwiperProps } from "../Carousel/Carousel";
+import Promo, { PromoProps } from "../Promo/Promo";
+import Feature, { FeatureProps } from "../Feature/Feature";
+import Bento, { BentoProps } from "../Bento/Bento";
+import Testimonials, { TestimonialsProps } from "../Testimonials/Testimonials";
 
-// type Block =
-//   | {
-//       __typename: "Hero";
-//       id: string;
-//       heading: string;
-//       image: { url: string; altText?: string };
-//     }
-//   | {
-//       __typename: "Carousel";
-//       id: string;
-//       items: {
-//         id: string;
-//         title: string;
-//         image: { url: string; altText?: string };
-//       }[];
-//     }
-//   | { __typename: "Promo"; id: string; text: string; link: string }
-//   | {
-//       __typename: "Collection";
-//       id: string;
-//       title: string;
-//       products: { id: string; name: string; price: number }[];
-//     };
+export interface BlocksProps {
+  blockSection: Array<
+    PromoProps | SwiperProps | FeatureProps | BentoProps | TestimonialsProps
+  >;
+}
 
-// type BlocksProps = {
-//   sections: Block[];
-// };
+const componentMap: Record<string, any> = {
+  Promo,
+  FeatureList: Feature,
+  Carousel,
+  Testimonial: Testimonials,
+  Bento,
+};
 
-// export function Blocks({ sections }: BlocksProps) {
-//   return (
-//     <>
-//       {sections.map((section) => {
-//         {
-//           section.__typename === "Hero" && (
-//             <Hero
-//               key={section.id}
-//               heading={section.heading}
-//               image={section.image}
-//             />
-//           );
-//         }
-//         {
-//           section.__typename === "Carousel" && (
-//             <Carousel key={section.id} items={section.items} />
-//           );
-//         }
-//         {
-//           section.__typename === "Promo" && (
-//             <Promo key={section.id} text={section.text} link={section.link} />
-//           );
-//         }
-//       })}
-//     </>
-//   );
-// }
+export default async function Blocks({ blockSection }: BlocksProps) {
+  return (
+    <>
+      {blockSection.map((block, index) => {
+        const Component = block.__typename
+          ? componentMap[block.__typename]
+          : undefined;
+        if (!Component) return null;
+        return <Component key={index} {...block} />;
+      })}
+    </>
+  );
+}

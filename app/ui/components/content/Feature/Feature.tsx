@@ -15,7 +15,8 @@ const icons: {
   Users: UsersIcon,
 };
 
-interface FeatureProps {
+export interface FeatureProps {
+  __typename: string | undefined;
   eyebrow?: string | undefined | null;
   heading?: string | undefined | null;
   description?: string | undefined | null;

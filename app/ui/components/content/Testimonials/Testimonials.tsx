@@ -1,12 +1,40 @@
-export default function Testimonials() {
+import Image from "next/image";
+
+export interface TestimonialsProps {
+  __typename: string | undefined;
+  asset?:
+    | {
+        url?: string | undefined | null;
+        alt?: string | undefined | null;
+      }
+    | undefined
+    | null;
+  quote?: string | undefined | null;
+  author?: string | undefined | null;
+  source?: string | undefined | null;
+  icon?: {
+    url?: string | undefined | null;
+    alt?: string | undefined | null;
+  } | undefined | null;
+}
+
+export default function Testimonials({
+  quote,
+  author,
+  source,
+  asset = { url: "", alt: "" },
+  icon = { url: "", alt: "" },
+}: TestimonialsProps) {
   return (
     <div className="bg-white py-10 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl ">
         <div className="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20 dark:bg-black dark:shadow-none dark:after:pointer-events-none dark:after:absolute dark:after:inset-0 dark:after:inset-ring dark:after:inset-ring-white/10 dark:after:sm:rounded-3xl">
-          <img
-            alt=""
-            src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1216&q=80"
+          <Image
+            alt={asset?.alt || "Testimonial Background"}
+            src={asset?.url || "/Google_2015_logo.svg.png"}
             className="absolute inset-0 size-full object-cover brightness-150 saturate-0"
+            height={1000}
+            width={1000}
           />
           <div className="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />
           <div
@@ -34,28 +62,20 @@ export default function Testimonials() {
             />
           </div>
           <div className="relative mx-auto max-w-2xl lg:mx-0">
-            <img
-              alt=""
-              src="/Google_2015_logo.svg.png"
+            <Image
+              alt={icon?.alt || "Google Icon"}
+              src={icon?.url || "/gracie.jpg"}
               className="h-12 w-auto dark:hidden"
-            />
-            <img
-              alt=""
-              src="/Google_2015_logo.svg.png"
-              className="h-12 w-auto not-dark:hidden"
+              height={300}
+              width={300}
             />
             <figure>
               <blockquote className="mt-6 text-lg font-semibold text-white sm:text-xl/8">
-                <p>
-                  “Gracie Wesley Chapel has great coaches and awesome students.
-                  All skill levels are welcomed here. These guys are badasses
-                  and family oriented at the same time. Overall, this is an
-                  excellent place to train.”
-                </p>
+                <p>{quote}</p>
               </blockquote>
               <figcaption className="mt-6 text-base text-white dark:text-gray-200">
-                <div className="font-semibold">Luke Lisowski</div>
-                <div className="mt-1">Google Review</div>
+                <div className="font-semibold">{author}</div>
+                <div className="mt-1">{source}</div>
               </figcaption>
             </figure>
           </div>

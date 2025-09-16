@@ -8,6 +8,7 @@ import {
   GetImageListQuery,
   GetContentPageQuery,
   GetInstructorQuery,
+  GetNewContentPageQuery,
 } from "@/app/ui/components/generated/gql/types";
 
 import {
@@ -17,6 +18,7 @@ import {
   heroQuery,
   imageListQuery,
   instructorQuery,
+  newContentPageQuery,
   promoQuery,
 } from "@/app/ui/components/content/gql";
 
@@ -113,6 +115,20 @@ export const fetchContentPage = async (values: string) => {
   try {
     const response = await request(HYGRAPH_API_ENDPOINT, contentPageQuery, <
       GetContentPageQuery
+    >{
+      slug: values,
+    });
+    return response;
+  } catch (error) {
+    console.error("Error fetching content page query data:", error);
+    throw error;
+  }
+};
+
+export const fetchNewContentPage = async (values: string) => {
+  try {
+    const response = await request(HYGRAPH_API_ENDPOINT, newContentPageQuery, <
+      GetNewContentPageQuery
     >{
       slug: values,
     });

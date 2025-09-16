@@ -28,6 +28,7 @@ export const heroQuery = gql`
 
 export const heroFields = gql`
   fragment heroFields on Hero {
+    __typename
     blog
     heading
     description
@@ -72,6 +73,7 @@ export const carouselQuery = gql`
 
 export const carouselFields = gql`
   fragment carouselFields on Carousel {
+    __typename
     heading
     link {
       anchor
@@ -105,6 +107,7 @@ export const promoQuery = gql`
 
 export const promoFields = gql`
   fragment promoFields on Promo {
+    __typename
     slug
     heading
     eyebrow
@@ -233,6 +236,7 @@ export const bentoQuery = gql`
 
 export const bentoFields = gql`
   fragment bentoFields on Bento {
+    __typename
     heading
     description
     largeBox {
@@ -258,6 +262,7 @@ export const bentoFields = gql`
 
 export const featureFields = gql`
   fragment featureFields on FeatureList {
+    __typename
     eyebrow
     heading
     description
@@ -275,6 +280,24 @@ export const featureFields = gql`
   }
 `;
 
+export const testimonialFields = gql`
+  fragment testimonialFields on Testimonial {
+    __typename
+    author
+    source
+    slug
+    quote
+    asset {
+      alt
+      url
+    }
+    icon {
+      alt
+      url
+    }
+  }
+`;
+
 export const contentPageQuery = gql`
   ${heroFields}
   ${carouselFields}
@@ -282,6 +305,7 @@ export const contentPageQuery = gql`
   ${collectionFields}
   ${bentoFields}
   ${featureFields}
+  ${testimonialFields}
   query getContentPage($slug: String!) {
     contentPage(where: { slug: $slug }) {
       slug
@@ -305,6 +329,48 @@ export const contentPageQuery = gql`
       }
       featureLists {
         ...featureFields
+      }
+      testimonials {
+        ...testimonialFields
+      }
+    }
+  }
+`;
+
+export const newContentPageQuery = gql`
+  ${heroFields}
+  ${carouselFields}
+  ${promoFields}
+  ${bentoFields}
+  ${featureFields}
+  ${testimonialFields}
+  query getNewContentPage($slug: String!) {
+    contentPage(where: { slug: $slug }) {
+      slug
+      content {
+        raw
+      }
+      hero {
+        ...heroFields
+      }
+      block {
+        blockSection {
+          ... on Carousel {
+            ...carouselFields
+          }
+          ... on Promo {
+            ...promoFields
+          }
+          ... on Bento {
+            ...bentoFields
+          }
+          ... on FeatureList {
+            ...featureFields
+          }
+          ... on Testimonial {
+            ...testimonialFields
+          }
+        }
       }
     }
   }
