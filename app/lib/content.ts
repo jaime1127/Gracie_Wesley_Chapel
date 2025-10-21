@@ -6,7 +6,6 @@ import {
   GetLayoutQuery,
   GetPromoQuery,
   GetImageListQuery,
-  GetContentPageQuery,
   GetInstructorQuery,
   GetNewContentPageQuery,
 } from "@/app/ui/components/generated/gql/types";
@@ -14,7 +13,6 @@ import {
 import {
   bentoQuery,
   carouselQuery,
-  contentPageQuery,
   heroQuery,
   imageListQuery,
   instructorQuery,
@@ -107,20 +105,6 @@ export const fetchImageListData = async (values: string) => {
     return response;
   } catch (error) {
     console.error("Error fetching image list query data:", error);
-    throw error;
-  }
-};
-
-export const fetchContentPage = async (values: string) => {
-  try {
-    const response = await request(HYGRAPH_API_ENDPOINT, contentPageQuery, <
-      GetContentPageQuery
-    >{
-      slug: values,
-    });
-    return response;
-  } catch (error) {
-    console.error("Error fetching content page query data:", error);
     throw error;
   }
 };

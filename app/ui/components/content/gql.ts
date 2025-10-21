@@ -298,45 +298,6 @@ export const testimonialFields = gql`
   }
 `;
 
-export const contentPageQuery = gql`
-  ${heroFields}
-  ${carouselFields}
-  ${promoFields}
-  ${collectionFields}
-  ${bentoFields}
-  ${featureFields}
-  ${testimonialFields}
-  query getContentPage($slug: String!) {
-    contentPage(where: { slug: $slug }) {
-      slug
-      content {
-        raw
-      }
-      hero {
-        ...heroFields
-      }
-      carousel {
-        ...carouselFields
-      }
-      promo {
-        ...promoFields
-      }
-      collection {
-        ...collectionFields
-      }
-      bento {
-        ...bentoFields
-      }
-      featureLists {
-        ...featureFields
-      }
-      testimonials {
-        ...testimonialFields
-      }
-    }
-  }
-`;
-
 export const newContentPageQuery = gql`
   ${heroFields}
   ${carouselFields}

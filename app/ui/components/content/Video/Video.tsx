@@ -5,7 +5,7 @@ interface VideoProps {
     asset?: {
       alt?: string;
       size?: number;
-      url?: string | null;
+      url?: string | null | undefined;
       handle?: string;
     };
   };
@@ -21,6 +21,7 @@ export default function Video({
     },
   },
 }: VideoProps) {
+  if (!videoAsset?.asset?.url) return null;
   return (
     <video
       className="absolute inset-0 w-full h-lvh object-cover"
@@ -29,7 +30,7 @@ export default function Video({
       muted
       playsInline
     >
-      <source src={videoAsset.asset?.url || ""} type="video/mp4" />
+      <source src={videoAsset.asset?.url} type="video/mp4" />
     </video>
   );
 }

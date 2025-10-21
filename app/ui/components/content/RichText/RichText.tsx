@@ -4,7 +4,7 @@ import React from "react";
 import { RichText as HygraphRichText } from "@graphcms/rich-text-react-renderer";
 
 interface RichTextProps {
-  content?: any;
+  content?: any | null;
 }
 
 export default function RichText({ content }: RichTextProps) {

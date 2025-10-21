@@ -81,7 +81,7 @@ export default function Hero({
         />
       ) : (
         <Image
-          src={backgroundImage?.url || "/IMG_6389.jpeg"}
+          src={backgroundImage?.url || "/GWC_Back.png"}
           alt={backgroundImage?.alt || "Hero Image"}
           width={1200}
           height={1200}

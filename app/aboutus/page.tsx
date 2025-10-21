@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { fetchContentPage } from "@/app/lib/content";
-import { GetContentPageQuery } from "@/app/ui/components/generated/gql/types";
+import { fetchNewContentPage } from "@/app/lib/content";
+import { GetNewContentPageQuery } from "@/app/ui/components/generated/gql/types";
 
 import { Aboutus } from "@/app/ui/aboutus/";
 
@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const content = (await fetchContentPage("about-us")) as GetContentPageQuery;
+  const content = (await fetchNewContentPage(
+    "about-us"
+  )) as GetNewContentPageQuery;
 
   const richText =
     content.contentPage && Array.isArray(content.contentPage.content)

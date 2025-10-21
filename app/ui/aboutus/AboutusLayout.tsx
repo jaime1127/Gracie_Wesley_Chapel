@@ -41,7 +41,7 @@ export default function AboutUs({ content = [], hero }: AboutUsProps) {
 
       {/* Our mission */}
       <div className="mx-auto max-w-7xl py-9 bg-white pr-6 pl-6">
-        <RichText content={content[0].raw} />
+        <RichText content={content.raw} />
       </div>
       <Faq />
 

@@ -33,7 +33,7 @@ export default async function RootLayout({
   const layout = (await fetchLayoutData("layout-slug")) as GetLayoutQuery;
   return (
     <html lang="en">
-      <link rel="icon" href="/gracie.jpg" />
+      <link rel="icon" href="/GWC_Back.png" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
