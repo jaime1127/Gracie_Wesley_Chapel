@@ -3,13 +3,13 @@ import { fetchNewContentPage } from "@/app/lib/content";
 import { ContentPage } from "@/app/ui/components/content";
 import { notFound } from "next/navigation";
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
 
   // Fetch data from Hygraph
   const content = (await fetchNewContentPage(slug)) as GetNewContentPageQuery;
 
-  // If no content, trigger Next.js 404 page
+  // Handle missing content
   if (!content?.contentPage) {
     notFound();
   }
