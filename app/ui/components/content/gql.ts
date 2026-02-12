@@ -186,6 +186,26 @@ export const instructorQuery = gql`
   }
 `;
 
+export const instructorSlugQuery = gql`
+  query getInstructorSlug($slug: String!) {
+    instructorSlugPage(where: { slug: $slug }) {
+      slug
+      name
+      position
+      rank
+      description
+      image {
+        alt
+        url
+      }
+      contactInfo {
+        phone
+        email
+      }
+    }
+  }
+`;
+
 export const imageListQuery = gql`
   query getImageList($slug: String!) {
     imageList(where: { slug: $slug }) {

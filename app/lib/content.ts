@@ -8,6 +8,7 @@ import {
   GetImageListQuery,
   GetInstructorQuery,
   GetNewContentPageQuery,
+  GetInstructorSlugQuery
 } from "@/app/ui/components/generated/gql/types";
 
 import {
@@ -16,6 +17,7 @@ import {
   heroQuery,
   imageListQuery,
   instructorQuery,
+  instructorSlugQuery,
   newContentPageQuery,
   promoQuery,
 } from "@/app/ui/components/content/gql";
@@ -85,6 +87,20 @@ export const fetchInstructorData = async (values: string) => {
   try {
     const response = await request(HYGRAPH_API_ENDPOINT, instructorQuery, <
       GetInstructorQuery
+    >{
+      slug: values,
+    });
+    return response;
+  } catch (error) {
+    console.error("Error fetching instructor data:", error);
+    throw error;
+  }
+};
+
+export const fetchInstructorPage= async (values: string) => {
+  try {
+    const response = await request(HYGRAPH_API_ENDPOINT, instructorSlugQuery, <
+      GetInstructorSlugQuery
     >{
       slug: values,
     });
