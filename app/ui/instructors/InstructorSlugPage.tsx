@@ -21,6 +21,7 @@ export interface InstructorPageProps {
       }
     | null
     | undefined;
+  privates?: boolean | null | undefined;
 }
 
 export default function Instructor({
@@ -33,6 +34,7 @@ export default function Instructor({
     alt: "Instructor Image",
   },
   contactInfo = { phone: null, email: null },
+  privates = false,
 }: InstructorPageProps) {
   return (
     <div className="px-8 py-20 bg-gray-100 my-16">
@@ -63,19 +65,19 @@ export default function Instructor({
             <h2 className="text-lg font-semibold text-gray-800">About Me</h2>
             <p className="text-lg text-gray-600">{description}</p>
           </div>
-
-          <div className="mt-6">
-            <h2 className="text-lg font-semibold text-gray-800">
-              **Available For Private Lessons**
-            </h2>
-            <p className="text-lg text-gray-600">
-              Available for private lessons for kids and adults — one‑on‑one or
-              small group sessions tailored to each student’s goals and
-              experience. Flexible scheduling and lesson plans; contact me to
-              book or ask about availability.
-            </p>
-          </div>
-
+          {privates && (
+            <div className="mt-6">
+              <h2 className="text-lg font-semibold text-gray-800">
+                **Available For Private Lessons**
+              </h2>
+              <p className="text-lg text-gray-600">
+                Available for private lessons for kids and adults — one‑on‑one
+                or small group sessions tailored to each student’s goals and
+                experience. Flexible scheduling and lesson plans; contact me to
+                book or ask about availability.
+              </p>
+            </div>
+          )}
           {contactInfo && (
             <div className="mt-6">
               <h3 className="text-md font-semibold text-gray-800">Contact</h3>

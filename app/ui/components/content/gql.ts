@@ -202,6 +202,7 @@ export const instructorSlugQuery = gql`
         phone
         email
       }
+      privates
     }
   }
 `;
