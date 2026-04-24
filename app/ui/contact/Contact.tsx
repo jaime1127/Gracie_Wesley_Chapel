@@ -76,7 +76,7 @@ export default function Contact() {
                 </dt>
                 <dd>
                   <a
-                    href="tel:+1 (555) 234-5678"
+                    href="tel:+1 (813) 528-8223"
                     className="hover:text-gray-900"
                   >
                     +1 (813) 528-8223
@@ -93,7 +93,7 @@ export default function Contact() {
                 </dt>
                 <dd>
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:info@graciewesleychapel.com"
                     className="hover:text-gray-900"
                   >
                     info@graciewesleychapel.com

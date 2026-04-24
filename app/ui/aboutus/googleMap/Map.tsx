@@ -6,7 +6,7 @@ export default function Map() {
       <h3 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl mb-4">
         Gym Location
       </h3>
-      <h3 className="text-pretty text-lg font-medium sm:text-xl/8 mb-4">
+      <h3 className="text-pretty text-lg font-medium sm:text-xl/8 mb-4 text-gray-900">
         Gracie Wesley Chapel | 24720 FL-54, Lutz, FL 33559
       </h3>
       <div
