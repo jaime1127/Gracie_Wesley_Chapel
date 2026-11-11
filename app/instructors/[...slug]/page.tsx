@@ -16,7 +16,7 @@ export default async function InstructorPage(props: {
   const slug = await props.params;
 
   const data = (await fetchInstructorPage(
-    slug.slug[0]
+    slug.slug[0],
   )) as GetInstructorSlugQuery;
 
   // pass the actual instructor object
@@ -24,7 +24,7 @@ export default async function InstructorPage(props: {
 
   return (
     <main className="py-8 mx-auto max-w-7xl bg-white my-16">
-      <h1 className="text-2xl font-bold">Instructor Page</h1>
+      <h1 className="text-2xl font-bold text-gray-800">Instructor Page</h1>
       <Link
         href="/instructors"
         className="whitespace-nowrap font-semibold text-indigo-600 inline-flex gap-1.5 underline hover:no-underline"
